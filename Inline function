@@ -1,0 +1,20 @@
+//inline funcyion can't be used for large sized function
+
+#include<iostream>
+using namespace std;
+inline int max(int a,int b)
+{
+    return (a>b?a:b);
+}
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    // take time not much readable
+    // int c = (a>b)? a:b;
+    // to overcome above problem we use inline function
+    int result = max(a,b);
+    cout<<result;
+    // cout<<c;
+    return 0;
+}
