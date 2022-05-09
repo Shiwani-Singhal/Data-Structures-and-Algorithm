@@ -1,0 +1,88 @@
+#include<iostream>
+using namespace std;
+class queue_arr
+{
+    int * arr;
+    int nextindex,firstindex,size,capacity;
+
+    public:
+    queue_arr(int totalsize)
+    {
+        arr = new int(totalsize);
+        nextindex =0;
+        firstindex = -1;
+        capacity = size;
+        size =0;
+    }
+    int getsize()
+    {
+        return size;
+    }
+    bool isEmpty()
+    {
+        return size==0;
+    }
+    void enqueue(int element)
+    {
+        if(size == capacity)
+        {
+            cout<<"Queue is Full !";
+        }
+        if(firstindex=-1)
+        {
+            firstindex =0;
+        }
+        arr[nextindex]=element;
+        nextindex = (nextindex+1)%capacity;
+        size++;
+
+    }
+    int front()
+    {
+        if(isEmpty())
+        {
+            cout<<"Queue is Empty";
+        }
+        int y = arr[firstindex];
+        return y;
+    }
+    int dequeue()
+    {
+        if(isEmpty())
+        {
+            cout<<"Queue is Empty";
+        }
+        int ans = arr[firstindex];
+        firstindex = (firstindex+1)%capacity;
+        size --;
+        if(size == 0)
+        {
+            nextindex =0;
+            firstindex = -1;
+        }
+        return ans;
+    }
+ 
+};
+int main()
+{
+    queue_arr q(5);
+
+    q.enqueue(10);
+    q.enqueue(20);
+    q.enqueue(30);
+    q.enqueue(40);
+    q.enqueue(50);
+    q.enqueue(60);
+
+    cout<<endl;
+    cout<<q.front()<<endl;
+    cout<<q.dequeue()<<endl;
+    cout<<q.front()<<endl;
+    cout<<q.dequeue()<<endl;
+    cout<<q.getsize()<<endl;
+    cout<<q.isEmpty()<<endl;
+
+    return 0;
+
+}
