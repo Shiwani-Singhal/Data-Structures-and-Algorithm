@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    // int i =10;
+    // int j =i;
+    // different address are allocated to both i and j
+    // cout<<i<<endl; // 10
+    // cout<<&i<<endl; // adddress at which i is stored
+    // cout<<j<<endl; // 10
+    // cout<<&j<<endl;  // address at which j is stored
+    // i++;
+    // as both i and j are allocated different memory so changes  made at one will not affect the other
+    // cout<<j;
+
+
+    //****** TO ALLOCATE THE SAME MEMORY TO DIFFERENT VARIABLES
+    int i =10;
+    int & j = i; // j is refrence to an already existing value
+    cout<<i<<endl;
+    cout<<&i<<endl;
+    cout<<j<<endl;
+    cout<<&j<<endl;
+    i++;
+    cout<<i<<endl;
+    cout<<&i<<endl;
+    cout<<j<<endl;
+    cout<<&j<<endl;
+
+    return 0;
+
+
+}
