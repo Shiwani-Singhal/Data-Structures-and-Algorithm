@@ -1,0 +1,44 @@
+//#include<iostream>
+// using namespace std;
+// int reverse_array(int a[],int start, int end)
+// {
+//     while(start<end)
+//     {
+//         int temp = a[start];
+//         a[start] = a[end];
+//         a[end] = temp;
+//         start ++;
+//         end--;
+//     }
+//     return 0;
+// }
+
+// int main()
+// {
+//     int n;
+//     cout<<"Enter the size of the array:";
+//     cin>>n;
+//     cout<<"Enter the elements of the array:";
+//     int a[n];
+//     for(int i =0;i<n;i++)
+//     {
+//         cin>>a[i];
+//     }
+//     cout<<"Traversing an array:";
+//     for(int i=0;i<n;i++)
+//     {
+//         cout<<a[i]<<" ";
+//     }
+//     cout<<endl;
+//     cout<<"Reversing an array:";
+//     reverse_array(a,0,n-1);
+//     for(int i=0;i<n;i++)
+//     {
+//         cout<<a[i]<<" ";
+//     }
+    // for(int i = n; i >= 0;i--)
+    // {
+    //     cout<<a[i]<<" ";
+    // }
+//     return 0;
+// }
