@@ -1,0 +1,35 @@
+//type casting
+#include<iostream>
+using namespace std;
+int main()
+{
+    //implicit typecasting
+    int i =65;
+    char c = i;
+    cout<<c<<endl;//return the ascii value coresponds to 65 i.e A
+    
+    // explicit typecasting
+    int * p = &i;
+    // cout<<&i<<endl;
+    // cout<<p;
+    // char * pc = p;// we cann't put int* into char* to implement this we use explicit typecasting
+    char * pc = (char*)p;
+    cout<<*p<<endl; //65
+    cout<<*pc<<endl; //A
+    cout<<*(pc+1)<<endl; //NUll
+    cout<<*(pc+2)<<endl; //NUll
+    cout<<*(pc+3)<<endl; //NUll
+    cout<<p<<endl; // adress of int integer
+    cout<<pc<<endl;
+
+    int a,b;
+    float res;
+    a = 21;
+    b = 5;
+    cout<<"Implicit Typecasting:"<<endl;
+    cout<<a/b<<endl;//  losss of info
+     
+    res = (float) 21/5;
+    cout<<"Explicit typecasting:"<<res<<endl;
+    return 0;
+}
